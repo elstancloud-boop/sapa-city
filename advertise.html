@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Advertise in Sapa City · billboards inside the game</title>
+<meta name="description" content="Put your brand inside Sapa City, the pixel life sim set in Lagos and Abuja. Billboards, sponsorships and travel-screen ads from ₦10,000 a week.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📣</text></svg>">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6efe1;color:#1d1a14;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}.wrap{max-width:980px;margin:0 auto;padding:28px 20px 70px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:34px}
+.brand{font:900 20px "Arial Black",Arial,sans-serif;text-decoration:none;background:#F7C600;border:3px solid #1d1a14;border-radius:999px;padding:6px 16px;box-shadow:3px 3px 0 #1d1a14}
+h1{font:700 46px/1.08 Georgia,serif;margin:0 0 12px;letter-spacing:-1px;max-width:720px}
+.lead{font-size:19px;color:#3d3326;max-width:660px;margin:0 0 30px}
+h2{font:700 28px Georgia,serif;margin:46px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.spot{background:#fffaf0;border:3px solid #1d1a14;border-radius:12px;padding:18px;box-shadow:5px 5px 0 #1d1a14;cursor:pointer;transition:transform .1s}
+.spot:hover{transform:translate(-2px,-2px)}.spot.on{background:#F7C600}
+.spot .e{font-size:30px}.spot h3{margin:4px 0 2px;font-size:18px}.spot .p{font:900 24px "Arial Black",Arial,sans-serif}.spot .p small{font:600 13px sans-serif;color:#6b5f4b}
+.spot p{margin:6px 0 0;font-size:14px;color:#3d3326}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;background:#fffaf0;border:2px solid #1d1a14;border-radius:10px;padding:14px 16px 14px 58px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:#1d1a14;color:#F7C600;font:900 16px/32px "Arial Black",Arial;text-align:center}
+.slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.city{background:#fffaf0;border:2px solid #1d1a14;border-radius:10px;padding:14px 16px}
+.city h3{margin:0 0 8px}.slot{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed #d6ccb4;font-size:14px}
+.slot:last-child{border:0}.free{color:#1FA055;font-weight:700}.taken{color:#B7791F;font-weight:700}
+.cta{margin-top:26px;background:#1d1a14;color:#fff;border-radius:14px;padding:24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.cta b{font-size:18px}.btn{display:inline-block;text-decoration:none;font-weight:800;padding:12px 20px;border:3px solid #1d1a14;border-radius:999px;background:#F7C600;color:#1d1a14;box-shadow:3px 3px 0 #000;cursor:pointer}
+.btn.alt{background:#2BB673}.btn.ghost{background:#fff}.btns{display:flex;gap:10px;flex-wrap:wrap}
+.note{font-size:13px;color:#6b5f4b;margin-top:10px}.hide{display:none}
+.mock{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap;margin:6px 0 0}
+.bbm{width:150px}.bbm div{height:78px;background:#fff;border:4px solid #333;border-radius:4px;display:flex;align-items:center;justify-content:center;font:900 15px "Arial Black",Arial;text-align:center;box-shadow:3px 3px 0 rgba(0,0,0,.3)}
+.bbm i{display:flex;justify-content:space-between;padding:0 34px}.bbm i::before,.bbm i::after{content:'';width:5px;height:26px;background:#555}
+</style></head><body><div class="wrap">
+<div class="top"><a class="brand" href="index.html">Sapa City</a><a href="index.html">Play the game →</a></div>
+<h1>Put your business inside Sapa City</h1>
+<p class="lead">Sapa City is a free pixel life game set in Lagos and Abuja. Players work, pay rent, chop suya and ride danfo across the city, and they pass your billboard every time they open the map. Ads go live within 24 hours of payment. No account needed.</p>
+<div class="mock"><div class="bbm"><div>YOUR<br>LOGO</div><i></i></div><p style="max-width:420px;margin:0">Billboards switch every 10 seconds between the brands on that spot, so fewer brands per board means more screen time. Tapping your ad opens your website, Instagram or WhatsApp.</p></div>
+
+<h2>1 · Choose your ad space</h2>
+<div class="grid" id="spots"></div>
+
+<h2>2 · Pick a city and slot</h2>
+<div class="slots" id="slots"></div>
+
+<h2>3 · Book it</h2>
+<ol class="steps">
+<li><b>Pay</b> for the space you picked using the button below. Prefer bank transfer? Ask for account details on WhatsApp.</li>
+<li><b>Send your logo or picture</b> (PNG or JPG, square or wide) plus the link you want players to open, on WhatsApp or email. Tell us the city and slot.</li>
+<li><b>You're live</b> within 24 hours, for 7 days per week booked. We'll send you a screenshot.</li>
+</ol>
+<div class="cta"><div><b id="sel">Selected: Map billboard</b><div class="note" style="color:#cfc6b5" id="selp"></div></div><div class="btns" id="btns"></div></div>
+<p class="note" id="nocontact"></p>
+
+<h2>Love the game?</h2>
+<p>Sapa City is free to play. Ads and tips keep it running and pay for new cities.</p>
+<div class="btns" id="tipb"></div>
+</div>
+<script src="ads-config.js"></script>
+<script>
+const C=Object.assign({contact:{},payLinks:{},prices:{billboard:10000,venue:15000,travel:25000,title:40000},ads:[]},window.SAPA_ADS||{});
+C.prices=Object.assign({billboard:10000,venue:15000,travel:25000,title:40000},C.prices||{});C.contact=C.contact||{};C.payLinks=C.payLinks||{};
+const N=n=>'₦'+Number(n).toLocaleString('en-NG');
+const SPOTS={billboard:{e:'🪧',n:'Map billboard',d:'One of 8 billboards on the city map. Seen whenever a player plans a trip.'},
+ travel:{e:'🚌',n:'Travel screen',d:'Full-width banner shown during every single ride in the game. Highest views.'},
+ venue:{e:'🍢',n:'Place sponsor',d:'"Sponsored by you" on a place, e.g. a suya spot, mall, gym or club.'},
+ title:{e:'🎬',n:'Start screen',d:'"Presented by" your brand on the first screen every player sees.'}};
+const BB={lagos:[['L1','Third Mainland Bridge'],['L2','Ikeja Along'],['L3','Ojuelegba'],['L4','Lekki Toll Gate'],['L5','Oshodi'],['L6','Eko Bridge'],['L7','Ozumba Mbadiwe'],['L8','Ikorodu Road']],
+ abuja:[['A1','Kubwa Expressway'],['A2','Berger Junction'],['A3','Airport Road'],['A4','Nyanya Bridge'],['A5','Eagle Square'],['A6','Area 1 Roundabout'],['A7','Gwarinpa Gate'],['A8','Maitama Junction']]};
+const q=new URLSearchParams(location.search);let spot=SPOTS[q.get('spot')]?q.get('spot'):'billboard';let city=q.get('city')==='abuja'?'abuja':'lagos';let slot=q.get('slot')||'';
+const td=new Date().toISOString().slice(0,10);
+const taken=(sp,ct,sl)=>C.ads.filter(a=>a.spot===sp&&(!a.city||a.city==='all'||a.city===ct)&&(!sl||a.slot===sl)&&(!a.until||a.until>=td));
+function render(){
+ document.getElementById('spots').innerHTML=Object.entries(SPOTS).map(([k,s])=>`<div class="spot ${k===spot?'on':''}" data-k="${k}"><div class="e">${s.e}</div><h3>${s.n}</h3><div class="p">${N(C.prices[k])} <small>/ week</small></div><p>${s.d}</p></div>`).join('');
+ document.querySelectorAll('.spot').forEach(el=>el.onclick=()=>{spot=el.dataset.k;slot='';render();});
+ let h='';
+ for(const ct of ['lagos','abuja']){
+  let rows='';
+  if(spot==='billboard') rows=BB[ct].map(([id,n])=>{const t=taken('billboard',ct,id).length;return `<div class="slot"><label><input type="radio" name="sl" value="${ct}|${id}" ${slot===id?'checked':''}> ${id} · ${n}</label><span class="${t?'taken':'free'}">${t?t+' brand'+(t>1?'s':'')+', room for more':'Free'}</span></div>`}).join('');
+  else {const t=taken(spot,ct).length;rows=`<div class="slot"><label><input type="radio" name="sl" value="${ct}|" ${city===ct?'checked':''}> ${ct==='lagos'?'Lagos':'Abuja'}${spot==='venue'?' (tell us which place)':''}</label><span class="${t?'taken':'free'}">${t?t+' running, room for more':'Free'}</span></div>`;}
+  h+=`<div class="city"><h3>${ct==='lagos'?'🚌 Lagos':'🏛️ Abuja'}</h3>${rows}</div>`;
+ }
+ document.getElementById('slots').innerHTML=h;
+ document.querySelectorAll('input[name=sl]').forEach(r=>r.onchange=()=>{[city,slot]=r.value.split('|');cta();});
+ cta();
+}
+function cta(){
+ const s=SPOTS[spot];const label=`${s.n} · ${city==='lagos'?'Lagos':'Abuja'}${slot?' · slot '+slot:''}`;
+ document.getElementById('sel').textContent='Selected: '+label;document.getElementById('selp').textContent=N(C.prices[spot])+' per week';
+ const msg=encodeURIComponent(`Hi, I want to advertise in Sapa City: ${label} (${N(C.prices[spot])}/week). My business is: `);
+ let b='';
+ if(C.payLinks[spot]) b+=`<a class="btn" href="${C.payLinks[spot]}" target="_blank" rel="noopener">Pay ${N(C.prices[spot])} now</a>`;
+ if(C.contact.whatsapp) b+=`<a class="btn alt" href="https://wa.me/${C.contact.whatsapp}?text=${msg}" target="_blank" rel="noopener">Book on WhatsApp</a>`;
+ if(C.contact.email) b+=`<a class="btn ghost" href="mailto:${C.contact.email}?subject=${encodeURIComponent('Sapa City ad: '+label)}&body=${msg}">Email us</a>`;
+ document.getElementById('btns').innerHTML=b||'<span>Booking opens soon.</span>';
+ document.getElementById('nocontact').textContent=b?'':'Online booking is being set up. Check back shortly.';
+}
+document.getElementById('tipb').innerHTML=(C.payLinks.tip?`<a class="btn" href="${C.payLinks.tip}" target="_blank" rel="noopener">☕ Tip the developer</a> `:'')+`<a class="btn ghost" href="index.html">Play Sapa City</a>`;
+render();
+</script></body></html>
